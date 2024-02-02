@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GMD</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="bet_origin">
+        "Origin : https://www.betika.com",
+    </string>
+    <string name="bet_agent">
+             "User-Agent : Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36"
+    </string>
+
+    <string name="agent">Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36
+    </string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:id="@+id/toolbar"
+            android:background="@color/primary"
+            app:title="@string/app_name"
+            app:titleMarginStart="40dp"
+            android:layout_height="?attr/actionBarSize">
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_gravity="end"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:scaleType="fitXY"
+                    android:id="@+id/counter_img"
+                    android:src="@drawable/ic_notify"/>
+                <TextView
+                    android:layout_width="20dp"
+                    android:id="@+id/counter"
+                    android:text="0"
+                    android:layout_marginLeft="10dp"
+                    android:layout_alignRight="@+id/counter_img"
+                    android:layout_height="20dp"/>
+            </RelativeLayout>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+</LinearLayout>

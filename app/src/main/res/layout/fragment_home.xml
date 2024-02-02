@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".home">
+<LinearLayout
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="2dp"
+        android:orientation="horizontal">
+        <Button
+            android:layout_width="wrap_content"
+            android:text="Pick file"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/filePicker"
+            android:background="@color/teal"
+            android:layout_height="wrap_content"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="Amount"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="5dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/shape"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="70dp"
+                        android:id="@+id/amount"
+                        android:hint="0"
+                        android:lines="1"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="number"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:text="PIN"
+                android:textColor="@color/black"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"/>
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                app:cardElevation="10dp"
+                android:elevation="10dp"
+                app:cardCornerRadius="5dp"
+                android:layout_height="wrap_content">
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="wrap_content"
+                    android:background="@drawable/shape"
+                    android:layout_height="wrap_content">
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="70dp"
+                        android:hint="PIN"
+                        android:lines="1"
+                        android:id="@+id/pin"
+                        android:maxLength="4"
+                        android:padding="5dp"
+                        android:textColor="@color/black"
+                        android:textColorHint="@color/black"
+                        android:inputType="number"
+                        android:layout_height="wrap_content">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+
+        <Button
+            android:layout_width="wrap_content"
+            android:text="Bulk Call"
+            android:textColor="@color/white"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/btnCall"
+            android:enabled="true"
+            android:background="@color/teal"
+            android:layout_height="wrap_content"/>
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="20dp"
+            android:elevation="10dp"
+            app:cardElevation="10dp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:elevation="10dp"
+            app:cardElevation="10dp"
+            android:layout_marginTop="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:padding="4dp"
+                android:layout_gravity="center"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="2dp"
+                    android:background="@color/white"
+                    android:orientation="horizontal"
+                    android:layout_height="wrap_content">
+                    <EditText
+                        android:layout_width="0dp"
+                        android:layout_weight="0.7"
+                        android:layout_marginRight="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/edit_number"
+                        android:textSize="20sp"
+                        android:inputType="phone"
+                        android:textColor="@color/black"/>
+                    <ImageButton
+                        android:layout_width="50dp"
+                        android:src="@drawable/ic_call"
+                        android:id="@+id/btnCallEdit"
+                        android:layout_gravity="center_vertical"
+                        android:layout_height="50dp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </ScrollView>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:id="@+id/recy"
+        android:background="@color/black"
+        android:layout_width="match_parent"
+        tools:listitem="@layout/single"
+        android:layout_height="wrap_content"/>
+</LinearLayout>
+
+</FrameLayout>
