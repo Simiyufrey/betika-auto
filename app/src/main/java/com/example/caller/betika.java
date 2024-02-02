@@ -207,7 +207,7 @@ public class betika extends Fragment {
             String  url2=String.format("https://api.betika.com/v1/uo/matches?page=1&limit=%s&tab=&sub_type_id=1,186,340&sport_id=14&tag_id=&sort_id=1&period_id=-1&esports=false",10);
 
             logSuccess("Fetching games");
-            Call<ResponseBody> call=apiService.getGames("10");
+            Call<ResponseBody> call=apiService.getGames("50");
             call.enqueue(new Callback<ResponseBody>() {
                 @Override
                 public void onResponse(Call<ResponseBody> call, Response<ResponseBody> response) {
