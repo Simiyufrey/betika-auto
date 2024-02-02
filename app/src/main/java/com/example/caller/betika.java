@@ -237,7 +237,7 @@ public class betika extends Fragment {
                                 String parentMatchId=game.get("parent_match_id").toString();
 
                                 try {
-                                    if(Double.parseDouble(home_odd) < 1.5 || Double.parseDouble(away_odd) <= 1.5) {
+                                    if((Double.parseDouble(home_odd) <= 1.5 && Double.parseDouble(home_odd) >= 1.2) || (Double.parseDouble(away_odd) <= 1.5 && Double.parseDouble(away_odd) >= 1.2)) {
                                         String odd = "";
                                         String pick = "";
                                         String team = "";
