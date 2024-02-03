@@ -26,6 +26,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
+            android:layout_marginRight="10dp"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
@@ -40,23 +41,19 @@
                 android:elevation="10dp"
                 app:cardCornerRadius="5dp"
                 android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="wrap_content"
-                    android:background="@drawable/shape"
-                    android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="70dp"
                         android:id="@+id/amount"
                         android:hint="0"
+                        android:background="@drawable/shape"
                         android:lines="1"
-                        android:padding="5dp"
+                        android:padding="10dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:inputType="number"
                         android:layout_height="wrap_content">
 
                     </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -67,6 +64,7 @@
         <LinearLayout
             android:layout_width="wrap_content"
             android:orientation="vertical"
+            android:layout_marginRight="10dp"
             android:layout_height="wrap_content">
             <TextView
                 android:layout_width="wrap_content"
@@ -81,24 +79,20 @@
                 android:elevation="10dp"
                 app:cardCornerRadius="5dp"
                 android:layout_height="wrap_content">
-                <com.google.android.material.textfield.TextInputLayout
-                    android:layout_width="wrap_content"
-                    android:background="@drawable/shape"
-                    android:layout_height="wrap_content">
+
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="70dp"
                         android:hint="PIN"
+                        android:background="@drawable/shape"
                         android:lines="1"
+                        android:padding="10dp"
                         android:id="@+id/pin"
                         android:maxLength="4"
-                        android:padding="5dp"
                         android:textColor="@color/black"
                         android:textColorHint="@color/black"
                         android:inputType="number"
                         android:layout_height="wrap_content">
-
                     </com.google.android.material.textfield.TextInputEditText>
-                </com.google.android.material.textfield.TextInputLayout>
 
             </androidx.cardview.widget.CardView>
 
@@ -136,7 +130,6 @@
             android:layout_height="wrap_content">
             <LinearLayout
                 android:layout_width="match_parent"
-                android:padding="4dp"
                 android:layout_gravity="center"
                 android:orientation="vertical"
                 android:layout_height="wrap_content">
@@ -154,6 +147,8 @@
                         android:layout_height="wrap_content"
                         android:id="@+id/edit_number"
                         android:textSize="20sp"
+                        android:padding="10dp"
+                        android:background="@drawable/shape"
                         android:inputType="phone"
                         android:textColor="@color/black"/>
                     <ImageButton

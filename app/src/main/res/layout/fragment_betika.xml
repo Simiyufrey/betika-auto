@@ -53,7 +53,6 @@
                         android:layout_height="wrap_content"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:background="@drawable/shape"
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="10dp"
                         android:layout_marginRight="10dp"
@@ -61,9 +60,10 @@
                         <com.google.android.material.textfield.TextInputEditText
                             android:layout_width="match_parent"
                             android:id="@+id/amount"
+                            android:background="@drawable/shape"
                             android:textColor="@color/black"
                             android:gravity="center"
-                            android:padding="3dp"
+                            android:padding="10dp"
                             app:boxBackgroundMode="none"
                             android:textSize="16sp"
                             android:inputType="number"
@@ -86,7 +86,6 @@
                         android:layout_height="wrap_content"/>
                     <com.google.android.material.textfield.TextInputLayout
                         android:layout_width="match_parent"
-                        android:background="@drawable/shape"
                         android:layout_marginBottom="5dp"
                         android:layout_marginLeft="10dp"
                         android:layout_height="wrap_content">
@@ -95,7 +94,8 @@
                             android:id="@+id/password1"
                             android:gravity="center"
                             android:textColor="@color/black"
-                            android:padding="3dp"
+                            android:padding="10dp"
+                            android:background="@drawable/shape"
                             app:boxBackgroundMode="none"
                             android:textSize="16sp"
                             android:layout_height="wrap_content"/>
@@ -140,13 +140,13 @@
                     android:layout_width="match_parent"
                     android:layout_marginRight="10dp"
                     android:layout_marginLeft="10dp"
-                    android:padding="3dp"
-                    android:background="@drawable/shape"
                     android:layout_height="wrap_content">
                     <com.google.android.material.textfield.TextInputEditText
                         android:layout_width="match_parent"
                         android:id="@+id/numbers"
                         android:lines="10"
+                        android:padding="20dp"
+                        android:background="@drawable/shape"
                         android:textColor="@color/black"
                         android:gravity="start"
                         app:boxBackgroundMode="none"
@@ -161,7 +161,7 @@
                     android:id="@+id/btn_bulk"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="10dp"
-                    android:layout_marginTop="10dp"
+                    android:layout_marginTop="15dp"
                     android:layout_marginBottom="10dp"
                     android:outlineProvider="none"
                     android:background="@drawable/bg_active"

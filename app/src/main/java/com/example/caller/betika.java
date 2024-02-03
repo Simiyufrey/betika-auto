@@ -151,7 +151,7 @@ public class betika extends Fragment {
                            data.put("app_name","MOBILE_WEB");
                            logSuccess("Balance: "+accountDetails.get("balance"));
                            if(Double.parseDouble(accountDetails.get("balance")) > 100){
-//                               fetch_games(accountDetails);
+                               fetch_games(accountDetails);
 //                               withdraw(data);
                            }
                            else{
@@ -390,7 +390,7 @@ public class betika extends Fragment {
                         String jsonresponse=response.body().string();
 
                         JSONObject json=new JSONObject(jsonresponse);
-                        logSuccess(json.toString());
+                        logSuccess(json.get("message").toString());
                         cancelBet(data,account);
                     } catch (IOException e) {
                         logError(e.getMessage());
@@ -400,7 +400,8 @@ public class betika extends Fragment {
                 }
                 else{
                     try {
-                        logError(response.errorBody().string());
+                        JSONObject error= new JSONObject(response.errorBody().string());
+                        logError(error.get("message").toString());
                         HashMap<String,String> data=new HashMap<>();
                         data.put("token",account.get("token"));
                         data.put("amount",account.get("balance"));
@@ -409,6 +410,8 @@ public class betika extends Fragment {
 
                     } catch (IOException e) {
                         logError(e.getMessage());
+                    } catch (JSONException e) {
+                        throw new RuntimeException(e);
                     }
                 }
             }
